@@ -8,7 +8,7 @@ $w.onReady(function () {
 
 
     const button = $w("#button8");
-    button.label = "Our Services";
+    button.label = "Explore Now";
     button.color = "FFB83C";
     button.font = "Wix Madefor Text";
     button.fontSize = "25";
@@ -17,7 +17,7 @@ $w.onReady(function () {
 
 
     const button = $w("#button5");
-    button.label = "Our Story";
+    button.label = "About Us";
     button.color = "FFB83C";
     button.font = "Poppins Extra Light";
     button.fontSize = "20";
