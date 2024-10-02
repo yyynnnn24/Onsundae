@@ -2,6 +2,17 @@
 // “Hello, World!” Example: https://learn-code.wix.com/en/article/hello-world
 
 $w.onReady(function () {
+
+    loadProducts();
+
+    $w('#repeater').onItemReady(($item, itemData, index) => {
+        $item('#addToCartButton').onClick(() => {
+            addToCart(itemData);
+        });
+ 
+    });
+});
+
     function loadProducts() {
         wixData.query('Products')
             .find()
@@ -18,4 +29,16 @@ $w.onReady(function () {
                 console.error('Error loading products:', err);
             });
     }
+
+    function addToCart(product) {
+        
+        $w('#shoppingCartIcon1').addProductToCart(product._id)
+            .then(() => {
+                console.log(`${product.name} was added to the cart`);
+            })
+            .catch((err) => {
+                console.error('Error adding to cart:', err);
+            });
+    }
+    
 });
