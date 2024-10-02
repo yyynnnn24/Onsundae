@@ -25,10 +25,6 @@ $w.onReady(function () {
     heading.fontSize = 79;
     heading.color = "#404040";
 
-    const paragraph = $w("#text6");
-    paragraph.text = "What makes us different? It’s our commitment to fresh, real ingredients and our passion for creating unique gelato experiences. Whether you’re looking for sugar-free options or bold, new flavors, every scoop at OnSundae is crafted with care and creativity, just for you."
-    paragraph.style.color = "#404040";
-    paragraph.style.fontFamily = "Nunito Sans Light";
-    paragraph.style.fontSize = "25px";
+
 
 });
