@@ -12,9 +12,7 @@ $w.onReady(function () {
     button.color = "FFB83C";
     button.font = "Wix Madefor Text";
     button.fontSize = "25";
-    button.onClick(() => {
-        wixLocation.to("/Services");
-
+    
 
     const button = $w("#button5");
     button.label = "About Us";
