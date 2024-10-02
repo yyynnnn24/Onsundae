@@ -10,6 +10,9 @@ $w.onReady(function () {
             addToCart(itemData);
         });
  
+        $item('#addToWishlistButton').onClick(() => {
+            addToWishlist(itemData);
+        });
     });
 });
 
@@ -41,4 +44,15 @@ $w.onReady(function () {
             });
     }
     
-});
+    function addToWishlist(product) {
+        wixData.insert('Wishlist', {
+            productId: product._id,
+            userId: wixUsers.currentUser.id,
+        })
+        .then(() => {
+            console.log(`${product.name} was added to the wishlist`);
+        })
+        .catch((err) => {
+            console.error('Error adding to wishlist:', err);
+        });
+    }
